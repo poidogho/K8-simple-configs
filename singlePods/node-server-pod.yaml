@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: server-pod
+  labels:
+    component: monolith-server
+spec:
+  containers:
+    - name: node-server
+      image: poidogho/ecommerceserver
+      ports:
+        - containerPort: 8080
